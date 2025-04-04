@@ -105,10 +105,10 @@ The new columns would be based on user_id:
 - total_sessions [int]
 - total_sessions_product_id [int]
 
-Time could be in minutes?
+Time could be in minutes and float? Maybe some min max scaling?
 
 ## EDA
-Once the new columns exist, we should split the users into three groups "only view", "also cart" and "purchasers" to plot some distributions or frequency tables or correlations.
+Once the new columns exist, we should split the users into three groups "only view", "only up until cart" and "purchasers" to plot some distributions or frequency tables or correlations compare different behavioral patterns.
 
 #### Deleting columns
 
