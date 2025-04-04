@@ -16,6 +16,18 @@ The dataset used in this project contains the following columns:
 
 This dataset provides a comprehensive view of user interactions with products, enabling analysis of user behavior, product trends, and more.
 
+After cleaning the unique entries per column:
+
+- event_time       501143
+- product_id        24255
+- category_id         260
+- category_code       104
+- brand               728
+- price              9478
+- user_id          224971
+- user_session     273421
+- event_type            3
+
 ---
 
 ## Table of Contents
@@ -35,6 +47,7 @@ The goal of this project is to analyze user interactions with products and deriv
 
 - Understanding user behavior patterns.
 - Predicting future user actions based on historical data.
+- That make event_type the target column. Is a user "viewing", "adding to cart" or finally "purchasing" will be the main question to answer based on all the other columns.
 
 ---
 
@@ -78,6 +91,7 @@ We could also check:
 -  if any outliers could be deleted
 - maybe group produdcts with low count as "other" or get rid of them
 - any other ideas?
+- most users never purchase... 
 
 ##### Scaling
 
@@ -107,12 +121,14 @@ The new columns would be based on user_id:
 
 Time could be in minutes and float? Maybe some min max scaling?
 
-## EDA
+#### EDA (Explorative Data Analysis)
 Once the new columns exist, we should split the users into three groups "only view", "only up until cart" and "purchasers" to plot some distributions or frequency tables or correlations compare different behavioral patterns.
 
 #### Deleting columns
 
 - user_id, session_id
+
+Once the new columns have been created, these two columns could be deleted.
 
 #### Train & Test Split
 
@@ -120,5 +136,5 @@ The time of the events ranges from 2020-09-24 11:57:26+0000 until 2021-02-28 23:
 
 ##### Models
 
-- Try out some classification model (sklearn)
-- Try out some neural network (tf)
+- Try out some classification model (sklearn) (similar to the Iris flower dataset)
+- Try out some neural network (tf) (similar to MNIST)
