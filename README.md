@@ -61,15 +61,16 @@ One hot encoding could be suitable for the event_type column. But since we will 
 
 Vectorization would be useful for object columns category_code and brand columns. Furthermore, I would suggest to transform product_id and category_id into into object type and vectorize as well. Think of product_id as a product name.
 
-Proposed method would be tf.keras.layers.TextVectorization
-Tokenization, Stemmisation, Lemmisation, removing StopWords etc. is not needed, it is already cleaned.
+Proposed method would be tf.keras.layers.TextVectorization.
+
+Tokenization, Stemmisation, Lemmisation, removing StopWords etc. is not needed, it is already cleaned. We also do not need sentiment analysis or similarity checks.
 The purpose of vectorisation is to avoid one hot fix encoding and create a mapping.
 
 ##### Dealing with class imbalance
 
-view        458082
-cart         34668
-purchase     23105
+- view        458082
+- cart         34668
+- purchase     23105
 Proposal would be to use Tomek Links to reduce the views.
 
 We could also check:
