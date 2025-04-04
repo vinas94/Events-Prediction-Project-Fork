@@ -118,11 +118,14 @@ The new columns would be based on user_id:
 - count_of_event_in_same_session [int]
 - total_sessions [int]
 - total_sessions_product_id [int]
+- NEW NEW NEW time_of_the_day_h [int]
+- NEW NEW NEW time_of_the_day_m [int]
 
 Time could be in minutes and float? Maybe some min max scaling?
 
 #### EDA (Explorative Data Analysis)
 Once the new columns exist, we should split the users into three groups "only view", "only up until cart" and "purchasers" to plot some distributions or frequency tables or correlations compare different behavioral patterns.
+We could also then check if any of the newly created columns are non-sensical and could be removed or further adapted.
 
 #### Deleting columns
 
