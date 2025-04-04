@@ -71,6 +71,7 @@ The purpose of vectorisation is to avoid one hot fix encoding and create a mappi
 - view        458082
 - cart         34668
 - purchase     23105
+
 Proposal would be to use Tomek Links to reduce the views.
 
 We could also check:
